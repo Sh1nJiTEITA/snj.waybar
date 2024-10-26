@@ -1,11 +1,14 @@
 // -*- mode: json -*-
 {
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 20, // Waybar height (to be removed for auto height)
     //"spacing": 4, // Gaps between modules (4px)
-    "modules-left": [ "group/g3" ],
-    "modules-center": ["group/g2",],
+    // "modules-left": [ "group/g3" ],
+    // "modules-center": ["group/g2",],
+    "modules-left": ["group/g2",],
     "modules-right": [
+    	"group/g3",
     	"group/g1",
+    	"group/g4",
     ],
     "group/g1": {
 	"orientation": "horizontal",
@@ -15,7 +18,6 @@
 	   "disk",
 	   "memory",
     	   "custom/cpu",
-           "clock",
 	],
     },
     "group/g2": {
@@ -29,28 +31,30 @@
 
 	"orientation": "horizontal",
 	"modules": [
-	    "custom/coin",
-	    "hyprland/language",
+	    // "custom/coin",
 	    "pulseaudio",
-	    "mpris",
+	    "hyprland/language"
+	    // "mpris",
+	],
+    },
+
+    "group/g4": {
+	"orientation": "horizontal",
+	"modules": [
+           "clock"
 	],
     },
 
     "hyprland/workspaces": {
-	// "format": "<sub>{icon}</sub>\n{windows}",
-	"format": "|{windows}",
-        "format-window-separator": " ",
-        "window-rewrite-default": "",
-        "window-rewrite": {
-	    "title<.*youtube.*>": "", 
-	    "class<firefox>": "",
-	    "class<firefox> title<.*github.*>": "",
-	    "foot": "",
-	    "alacritty": "",
-	    "code": "󰨞",
-	    "class<vim>": "",
-	    "class<discord>": "󰙯"
+	"format": "{name}",  // Отображаем только имя активного рабочего пространства
+	"format-icons": {
+		"active": "{name}",  // Для активного рабочего пространства показываем только его номер
+		"default": ""        // Для остальных ничего не отображаем
 	},
+       "persistent-workspaces": {
+             "*": 5, // 5 workspaces by default on every monitor
+             "HDMI-A-1": 3 // but only three on HDMI-A-1
+       }
     },
 
     "hyprland/language": {

@@ -35,11 +35,25 @@
 @define-color fg0 #fbf1c7;
 @define-color orange1 #fe8019;
 
+@define-color green_c1 #809c13;
+@define-color green_c2 #ececa3;
+@define-color green_c3 #607c3c;
+
+/* OK! */
+/* @define-color out_t alpha(@bg1, 0.5); */
+/* @define-color in_t alpha(@bg2, 0.8); */
+
+@define-color out_t alpha(@bg2, 0.5);
+@define-color in_t alpha(@bg3, 0.5);
+
+
+
 
 window#waybar {
-    background-color: alpha(@bg0_h, 0.5);
+
+    background-color: alpha(@bg0, 0.1);
     /* background-color: rgba(100, 114, 125, 0.5); */
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    border-bottom: 2px solid @bg;
     /* color: #ffffff; */
     transition-property: background-color;
     transition-duration: .5s;
@@ -70,8 +84,9 @@ window#waybar.hidden {
     /* padding-right: px; */
     margin: 5px;
     border-radius: 5px; 
-    background-color: alpha(@bg1, 0.5);
-    color: @fg4;
+    /* background-color: alpha(@bg1, 0.5); */
+    background-color: @in_t;
+    color: @fg2;
     font-weight: bold;
 }
 
@@ -80,14 +95,14 @@ window#waybar.hidden {
     padding-right: 12px;
     margin: 5px;
     border-radius: 5px; 
-    background-color: alpha(@bg1, 0.5);
-    color: @fg4;
+    /* background-color: alpha(@bg1, 0.5); */
+    background-color: @in_t;
+    color: @fg2;
     font-weight: bold;
 }
 
 #pulseaudio,
 #memory,
-#clock, 
 #custom-cpu, 
 #custom-coin,
 #disk, 
@@ -96,10 +111,27 @@ window#waybar.hidden {
     padding: 0px 10px; 
     margin: 5px;
     border-radius: 5px; 
-    background-color: alpha(@bg1, 0.5);
-    color: @fg4;
+    /* background-color: alpha(@bg1, 0.5); */
+    background-color: @in_t;
+    color: @fg2;
     font-weight: bold;
 }
+
+
+#clock {
+    padding: 0px 10px; 
+    margin: 5px;
+    border-radius: 5px; 
+    background-color: @in_t;
+    /* background-color: alpha(@bg1, 0.5); */
+    /* background-color: alpha(@bg1, 0.5); */
+    /* color: @fg2; */
+    color: @fg2;
+    /* color: #83a598; */
+    font-weight: bold;
+}
+
+
 
 #pulseaudio:hover,
 #power-profiles-daemon:hover,
@@ -126,23 +158,49 @@ window#waybar.hidden {
 
 #g1 {
     margin: 5px 5px;
-    margin-right: 15px;
-    background-color: @bg;
+    /* margin-right: 15px; */
+    background-color: @out_t;
     border-radius: 7px;
 }
 
 #g2 {
-    margin: 5px 5px;
-    background-color: @bg;
+    min-height: 2px;
+    margin: 5px 10px;
+    /* margin: 10px; */
+    margin-left: 15px;
+    background-color: @out_t;
+    /* background-color: alpha(@fg1, 0.5); */
     border-radius: 7px;
 }
 
 #g3 {
     margin: 5px 5px;
-    margin-left: 15px;
+    /* margin-left: 15px; */
+    background-color: @out_t;
+    border-radius: 7px;
+}
+
+#g4 {
+    margin: 5px 5px;
+    margin-right: 15px;
+    background-color: @out_t;
+    border-radius: 7px;
+}
+
+#g5 {
+    min-height: 2px;
+    /* margin-left: 15px; */
     background-color: @bg;
     border-radius: 7px;
 }
+
+#g6 {
+    margin: 5px 5px;
+    /* margin-left: 15px; */
+    background-color: @bg;
+    border-radius: 7px;
+}
+
 
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
@@ -155,23 +213,32 @@ window#waybar.hidden {
 }
 
 #workspaces { 
-    padding: 0 0 0 10px; 
+    /* padding: 0 0 0 10px;  */
+    padding-left: 10px;
     margin: 0 0px;
     color: @fg4;
     font-weight: bold;
 }
 
 #workspaces button { 
-    margin: 5 10 5 0px;
-    padding: 0 20 0 10px;
-    font-size: 8px;
-    background-color: alpha(@bg1, 0.5);
-    color: @fg4;
+    /* margin: 5 10 5 0px; */
+    min-height: 1px;
+    margin: 5 5 5 0px;
+    padding: 0 9 0 9px;
+    font-size: 1px;
+    border-radius: 10px;
+    /* background-color: alpha(#504945 , 0.5); */
+    background-color: @in_t;
+    /* alpha(@bg1, 0.5) */
+    color: @green_c2;
 }
 
 #workspaces button.active {
     color: @fg0;
-    background-color: alpha(@bg1, 1.0);
+    padding-left:45px;
+    padding-right:50px;
+    background-color: alpha(@purple1 , 1.0);
+    color: @green_c2;
 }
 
 #workspaces button.hovered {
