@@ -1,0 +1,183 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+}
+
+@define-color bg #282828;
+@define-color bg_t rgba(28,28,28,0.5);
+@define-color red0 #cc241d;
+@define-color green0 #98971a;
+@define-color yellow0 #d79921;
+@define-color blue0 #458588;
+@define-color purple0 #689d6a;
+@define-color gray0 #a89984;
+@define-color gray1 #928374;
+@define-color red1 #fb4934;
+@define-color green1 #b8bb26;
+@define-color yellow1 #fabd2f;
+@define-color blue1 #83a598;
+@define-color purple1 #d3869b;
+@define-color aqua #8ec07c;
+@define-color fg #ebdbb2;
+@define-color bg0_h #1d2021;
+@define-color bg0 #282828;
+@define-color bg1 #3c3836;
+@define-color bg2 #504945;
+@define-color bg3 #665c54;
+@define-color bg4 #7c6f64;
+@define-color gray3 #928374;
+@define-color orange0 #d65d0e;
+@define-color bg0_s #32302f;
+@define-color fg4 #a89984;
+@define-color fg3 #bfae93;
+@define-color fg2 #d5c4a1;
+@define-color fg1 #ebdbb2;
+@define-color fg0 #fbf1c7;
+@define-color orange1 #fe8019;
+
+
+window#waybar {
+    background-color: alpha(@bg0_h, 0.5);
+    /* background-color: rgba(100, 114, 125, 0.5); */
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    /* color: #ffffff; */
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+tooltip label {
+    /* font-size: 20px; */
+    background-color: @bg1;
+    color: @fg4;
+    border: 0px;
+    border-radius: 5px; 
+}
+
+tooltip  {
+    background-color: @bg1;
+    color: @fg4;
+    /* border: 0px; */
+    border-radius: 5px; 
+    border: 6px solid @bg;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#network { 
+    padding: 0px 6px; 
+    /* padding-right: px; */
+    margin: 5px;
+    border-radius: 5px; 
+    background-color: alpha(@bg1, 0.5);
+    color: @fg4;
+    font-weight: bold;
+}
+
+#power-profiles-daemon { 
+    padding: 0px 10px; 
+    padding-right: 12px;
+    margin: 5px;
+    border-radius: 5px; 
+    background-color: alpha(@bg1, 0.5);
+    color: @fg4;
+    font-weight: bold;
+}
+
+#pulseaudio,
+#memory,
+#clock, 
+#custom-cpu, 
+#custom-coin,
+#disk, 
+#language, 
+#mpris {
+    padding: 0px 10px; 
+    margin: 5px;
+    border-radius: 5px; 
+    background-color: alpha(@bg1, 0.5);
+    color: @fg4;
+    font-weight: bold;
+}
+
+#pulseaudio:hover,
+#power-profiles-daemon:hover,
+#network:hover,
+#memory:hover,
+#clock:hover, 
+#custom-cpu:hover, 
+#custom-coin:hover,
+#disk:hover, 
+#language:hover, 
+#mpris:hover { 
+    color: @fg0;
+    background-color: alpha(@bg, 0.5);
+}
+
+#clock.tooltip {
+    font-size: 50px;
+    background-color: @bg1;
+    color: @fg4;
+    border: 0px;
+    border-radius: 5px; 
+}
+
+
+#g1 {
+    margin: 5px 5px;
+    margin-right: 15px;
+    background-color: @bg;
+    border-radius: 7px;
+}
+
+#g2 {
+    margin: 5px 5px;
+    background-color: @bg;
+    border-radius: 7px;
+}
+
+#g3 {
+    margin: 5px 5px;
+    margin-left: 15px;
+    background-color: @bg;
+    border-radius: 7px;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: @bgColor;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: @bgColor;
+	background: transparent;
+}
+
+#workspaces { 
+    padding: 0 0 0 10px; 
+    margin: 0 0px;
+    color: @fg4;
+    font-weight: bold;
+}
+
+#workspaces button { 
+    margin: 5 10 5 0px;
+    padding: 0 20 0 10px;
+    font-size: 8px;
+    background-color: alpha(@bg1, 0.5);
+    color: @fg4;
+}
+
+#workspaces button.active {
+    color: @fg0;
+    background-color: alpha(@bg1, 1.0);
+}
+
+#workspaces button.hovered {
+    color: @fg0;
+    background-color: alpha(@bg1, 0.1);
+}
+
+
+
