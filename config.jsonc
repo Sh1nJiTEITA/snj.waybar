@@ -1,14 +1,61 @@
 // -*- mode: json -*-
 {
-    "height": 20, // Waybar height (to be removed for auto height)
+    // "height": 10, // Waybar height (to be removed for auto height)
+    "margin": 7,
     //"spacing": 4, // Gaps between modules (4px)
     // "modules-left": [ "group/g3" ],
     // "modules-center": ["group/g2",],
-    "modules-left": ["group/g2",],
+ //    "modules-left": ["group/g2",],
+ //    "modules-right": [
+ //    	"group/g3",
+ //    	"group/g1",
+ //    	"group/g4",
+ //    ],
+ //    "group/g1": {
+	// "orientation": "horizontal",
+	// "modules": [
+	//    "power-profiles-daemon",
+	//    "network",
+	//    "disk",
+	//    "memory",
+ //    	   "custom/cpu",
+	// ],
+ //    },
+ //    "group/g2": {
+	// "orientation": "horizontal",
+	// "modules": [
+	//     "hyprland/workspaces"
+	// ],
+ //    },
+	//
+ //    "group/g3": {
+	//
+	// "orientation": "horizontal",
+	// "modules": [
+	//     // "custom/coin",
+	//     "pulseaudio",
+	//     "hyprland/language"
+	//     // "mpris",
+	// ],
+ //    },
+	//
+ //    "group/g4": {
+	// "orientation": "horizontal",
+	// "modules": [
+ //           "clock"
+	// ],
+ //    },
+
+    "modules-left": ["hyprland/workspaces"],
     "modules-right": [
-    	"group/g3",
-    	"group/g1",
-    	"group/g4",
+    	"pulseaudio",
+	    "hyprland/language",
+    	"power-profiles-daemon",
+	   "network",
+	   "disk",
+	   "memory",
+    	   "custom/cpu",
+    	"clock",
     ],
     "group/g1": {
 	"orientation": "horizontal",

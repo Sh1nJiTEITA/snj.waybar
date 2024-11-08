@@ -39,24 +39,29 @@
 @define-color green_c2 #ececa3;
 @define-color green_c3 #607c3c;
 
-/* OK! */
-/* @define-color out_t alpha(@bg1, 0.5); */
-/* @define-color in_t alpha(@bg2, 0.8); */
-
 @define-color out_t alpha(@bg2, 0.5);
 @define-color in_t alpha(@bg3, 0.5);
+@define-color in_t alpha(@bg1, 0.9);
+@define-color in_t alpha(@bg0, 0.0);
+
 
 
 
 
 window#waybar {
 
-    background-color: alpha(@bg0, 0.1);
-    /* background-color: rgba(100, 114, 125, 0.5); */
-    border-bottom: 2px solid @bg;
+    background-color: alpha(@bg0, 0.8);
+    /* background-color: alpha(#000000, 0.8); */
+    /* background-color: rgba(100, 114, 125, 255); */
+    /* border-bottom: 2px solid @bg; */
     /* color: #ffffff; */
     transition-property: background-color;
     transition-duration: .5s;
+    /* margin-right: 8px; */
+    /* margin-left: 8px; */
+    border-radius: 7px;
+    padding: 8px;
+
 }
 
 tooltip label {
@@ -157,7 +162,7 @@ window#waybar.hidden {
 
 
 #g1 {
-    margin: 5px 5px;
+    margin: 4px 4px;
     /* margin-right: 15px; */
     background-color: @out_t;
     border-radius: 7px;
@@ -167,7 +172,7 @@ window#waybar.hidden {
     min-height: 2px;
     margin: 5px 10px;
     /* margin: 10px; */
-    margin-left: 15px;
+    margin-left: 8px;
     background-color: @out_t;
     /* background-color: alpha(@fg1, 0.5); */
     border-radius: 7px;
@@ -182,7 +187,7 @@ window#waybar.hidden {
 
 #g4 {
     margin: 5px 5px;
-    margin-right: 15px;
+    margin-right: 8px;
     background-color: @out_t;
     border-radius: 7px;
 }
