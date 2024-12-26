@@ -39,6 +39,8 @@
 @define-color green_c2 #ececa3;
 @define-color green_c3 #607c3c;
 
+
+
 @define-color out_t alpha(@bg2, 0.5);
 @define-color in_t alpha(@bg3, 0.5);
 @define-color in_t alpha(@bg1, 0.9);
@@ -46,22 +48,12 @@
 
 
 
-
-
 window#waybar {
 
     background-color: alpha(@bg0, 0.8);
-    /* background-color: alpha(#000000, 0.8); */
-    /* background-color: rgba(100, 114, 125, 255); */
-    /* border-bottom: 2px solid @bg; */
-    /* color: #ffffff; */
     transition-property: background-color;
     transition-duration: .5s;
-    /* margin-right: 8px; */
-    /* margin-left: 8px; */
     border-radius: 7px;
-    padding: 8px;
-
 }
 
 tooltip label {
@@ -83,29 +75,22 @@ tooltip  {
 window#waybar.hidden {
     opacity: 0.2;
 }
+/**/
+/* #network {  */
+/*     padding: 0px 6px;  */
+/*     padding-right: px; */
+/*     margin: 5px; */
+/*     border-radius: 5px;  */
+/*     background-color: alpha(@bg1, 0.5); */
+/*     background-color: @in_t; */
+/*     color: @fg2; */
+/*     font-weight: bold; */
+/* } */
+/**/
 
-#network { 
-    padding: 0px 6px; 
-    /* padding-right: px; */
-    margin: 5px;
-    border-radius: 5px; 
-    /* background-color: alpha(@bg1, 0.5); */
-    background-color: @in_t;
-    color: @fg2;
-    font-weight: bold;
-}
-
-#power-profiles-daemon { 
-    padding: 0px 10px; 
-    padding-right: 12px;
-    margin: 5px;
-    border-radius: 5px; 
-    /* background-color: alpha(@bg1, 0.5); */
-    background-color: @in_t;
-    color: @fg2;
-    font-weight: bold;
-}
-
+#clock,
+#power-profiles-daemon,
+#network,
 #pulseaudio,
 #memory,
 #custom-cpu, 
@@ -116,26 +101,23 @@ window#waybar.hidden {
     padding: 0px 10px; 
     margin: 5px;
     border-radius: 5px; 
-    /* background-color: alpha(@bg1, 0.5); */
-    background-color: @in_t;
+    /* background-color: @bg1; */
+    background-color: @out_t;
+    /* background-color: alpha(@in_t, 0.5); */
     color: @fg2;
     font-weight: bold;
 }
 
-
-#clock {
-    padding: 0px 10px; 
-    margin: 5px;
-    border-radius: 5px; 
-    background-color: @in_t;
-    /* background-color: alpha(@bg1, 0.5); */
-    /* background-color: alpha(@bg1, 0.5); */
-    /* color: @fg2; */
-    color: @fg2;
-    /* color: #83a598; */
-    font-weight: bold;
-}
-
+/**/
+/* #clock { */
+/*     padding: 0px 10px;  */
+/*     margin: 5px; */
+/*     border-radius: 5px;  */
+/*     background-color: @in_t; */
+/*     color: @fg2; */
+/*     font-weight: bold; */
+/* } */
+/**/
 
 
 #pulseaudio:hover,
@@ -160,51 +142,23 @@ window#waybar.hidden {
     border-radius: 5px; 
 }
 
+#g4 { 
+    background-color: alpha(@out_t, 0.3);
+    margin-right: 0;
+    margin-left: 0.5em;
+    border-radius: 5px;
+}
 
+/* #g4, */
+#g3,
+#g2,
 #g1 {
-    margin: 4px 4px;
-    /* margin-right: 15px; */
-    background-color: @out_t;
-    border-radius: 7px;
+    background-color: alpha(@out_t, 0.3);
+    margin: 0 0.5em;
+    border-radius: 5px;
 }
 
-#g2 {
-    min-height: 2px;
-    margin: 5px 10px;
-    /* margin: 10px; */
-    margin-left: 8px;
-    background-color: @out_t;
-    /* background-color: alpha(@fg1, 0.5); */
-    border-radius: 7px;
-}
 
-#g3 {
-    margin: 5px 5px;
-    /* margin-left: 15px; */
-    background-color: @out_t;
-    border-radius: 7px;
-}
-
-#g4 {
-    margin: 5px 5px;
-    margin-right: 8px;
-    background-color: @out_t;
-    border-radius: 7px;
-}
-
-#g5 {
-    min-height: 2px;
-    /* margin-left: 15px; */
-    background-color: @bg;
-    border-radius: 7px;
-}
-
-#g6 {
-    margin: 5px 5px;
-    /* margin-left: 15px; */
-    background-color: @bg;
-    border-radius: 7px;
-}
 
 
 #custom-right-arrow-dark,
@@ -226,24 +180,24 @@ window#waybar.hidden {
 }
 
 #workspaces button { 
-    /* margin: 5 10 5 0px; */
+    margin: 5 10 5 0px;
     min-height: 1px;
-    margin: 5 5 5 0px;
     padding: 0 9 0 9px;
     font-size: 1px;
-    border-radius: 10px;
+    border-radius: 7px;
     /* background-color: alpha(#504945 , 0.5); */
-    background-color: @in_t;
+    background-color: @out_t;
     /* alpha(@bg1, 0.5) */
-    color: @green_c2;
+    /* color: @green_c2; */
+
+    color: @fg2;
 }
 
 #workspaces button.active {
     color: @fg0;
-    padding-left:45px;
-    padding-right:50px;
-    background-color: alpha(@purple1 , 1.0);
-    color: @green_c2;
+    padding-right: 50em;
+    padding-left: 50em;
+    background-color: alpha(@fg0, 0.8);
 }
 
 #workspaces button.hovered {
