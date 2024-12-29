@@ -1,209 +1,60 @@
-* {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 16px;
+/* Основной стиль */
+#waybar {
+  background: #121212;
+  color: #C5C8C6;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 10pt;
 }
 
-@define-color bg #282828;
-@define-color bg_t rgba(28,28,28,0.5);
-@define-color red0 #cc241d;
-@define-color green0 #98971a;
-@define-color yellow0 #d79921;
-@define-color blue0 #458588;
-@define-color purple0 #689d6a;
-@define-color gray0 #a89984;
-@define-color gray1 #928374;
-@define-color red1 #fb4934;
-@define-color green1 #b8bb26;
-@define-color yellow1 #fabd2f;
-@define-color blue1 #83a598;
-@define-color purple1 #d3869b;
-@define-color aqua #8ec07c;
-@define-color fg #ebdbb2;
-@define-color bg0_h #1d2021;
-@define-color bg0 #282828;
-@define-color bg1 #3c3836;
-@define-color bg2 #504945;
-@define-color bg3 #665c54;
-@define-color bg4 #7c6f64;
-@define-color gray3 #928374;
-@define-color orange0 #d65d0e;
-@define-color bg0_s #32302f;
-@define-color fg4 #a89984;
-@define-color fg3 #bfae93;
-@define-color fg2 #d5c4a1;
-@define-color fg1 #ebdbb2;
-@define-color fg0 #fbf1c7;
-@define-color orange1 #fe8019;
-
-@define-color green_c1 #809c13;
-@define-color green_c2 #ececa3;
-@define-color green_c3 #607c3c;
-
-
-
-@define-color out_t alpha(@bg2, 0.5);
-@define-color in_t alpha(@bg3, 0.5);
-@define-color in_t alpha(@bg1, 0.9);
-@define-color in_t alpha(@bg0, 0.0);
-
-
-
-window#waybar {
-
-    background-color: alpha(@bg0, 0.8);
-    transition-property: background-color;
-    transition-duration: .5s;
-    border-radius: 7px;
+* { 
+    padding: 0 0.4em;
+    min-height: 0;
+    color: #d5c4a1;
 }
 
-tooltip label {
-    /* font-size: 20px; */
-    background-color: @bg1;
-    color: @fg4;
-    border: 0px;
-    border-radius: 5px; 
+/* Модули */
+
+#workspaces {
+  background: transparent;
+  margin: 0.0em;
+  padding: 0 0.05em;
 }
 
-tooltip  {
-    background-color: @bg1;
-    color: @fg4;
-    /* border: 0px; */
-    border-radius: 5px; 
-    border: 6px solid @bg;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-/**/
-/* #network {  */
-/*     padding: 0px 6px;  */
-/*     padding-right: px; */
-/*     margin: 5px; */
-/*     border-radius: 5px;  */
-/*     background-color: alpha(@bg1, 0.5); */
-/*     background-color: @in_t; */
-/*     color: @fg2; */
-/*     font-weight: bold; */
-/* } */
-/**/
-
-#clock,
-#power-profiles-daemon,
-#network,
-#pulseaudio,
-#memory,
-#custom-cpu, 
-#custom-coin,
-#disk, 
-#language, 
-#mpris {
-    padding: 0px 10px; 
-    margin: 5px;
-    border-radius: 5px; 
-    /* background-color: @bg1; */
-    background-color: @out_t;
-    /* background-color: alpha(@in_t, 0.5); */
-    color: @fg2;
-    font-weight: bold;
-}
-
-/**/
-/* #clock { */
-/*     padding: 0px 10px;  */
-/*     margin: 5px; */
-/*     border-radius: 5px;  */
-/*     background-color: @in_t; */
-/*     color: @fg2; */
-/*     font-weight: bold; */
-/* } */
-/**/
-
-
-#pulseaudio:hover,
-#power-profiles-daemon:hover,
-#network:hover,
-#memory:hover,
-#clock:hover, 
-#custom-cpu:hover, 
-#custom-coin:hover,
-#disk:hover, 
-#language:hover, 
-#mpris:hover { 
-    color: @fg0;
-    background-color: alpha(@bg, 0.5);
-}
-
-#clock.tooltip {
-    font-size: 50px;
-    background-color: @bg1;
-    color: @fg4;
-    border: 0px;
-    border-radius: 5px; 
-}
-
-#g4 { 
-    background-color: alpha(@out_t, 0.3);
-    margin-right: 0;
-    margin-left: 0.5em;
-    border-radius: 5px;
-}
-
-/* #g4, */
-#g3,
-#g2,
-#g1 {
-    background-color: alpha(@out_t, 0.3);
-    margin: 0 0.5em;
-    border-radius: 5px;
-}
-
-
-
-
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: @bgColor;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: @bgColor;
-	background: transparent;
-}
-
-#workspaces { 
-    /* padding: 0 0 0 10px;  */
-    padding-left: 10px;
-    margin: 0 0px;
-    color: @fg4;
-    font-weight: bold;
-}
-
-#workspaces button { 
-    margin: 5 10 5 0px;
-    min-height: 1px;
-    padding: 0 9 0 9px;
-    font-size: 1px;
-    border-radius: 7px;
-    /* background-color: alpha(#504945 , 0.5); */
-    background-color: @out_t;
-    /* alpha(@bg1, 0.5) */
-    /* color: @green_c2; */
-
-    color: @fg2;
+#workspaces button {
+  background: transparent;
+  margin: 0.0em;
+  padding: 0 0.05em;
 }
 
 #workspaces button.active {
-    color: @fg0;
-    padding-right: 50em;
-    padding-left: 50em;
-    background-color: alpha(@fg0, 0.8);
+  color: #FFFFFF;
+  background: #d79921;
+  border-radius: 0px;
+  /* padding: 0; */
+  /* margin: 0; */
 }
 
-#workspaces button.hovered {
-    color: @fg0;
-    background-color: alpha(@bg1, 0.1);
+#battery {
+  color: #d79921;
+}
+
+#volume, #cpu, #memory {
+  /* padding: 0 10px; */
+}
+
+/* Сеть */
+#network {
+  color: #8ec07c;
+}
+
+/* Часы */
+#clock {
+  color: #d79921;
+    padding-right: 0px;
 }
 
 
-
+/* Стиль для других модулей */
+.custom {
+  color: #d79921;
+}
