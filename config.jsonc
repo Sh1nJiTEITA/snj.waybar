@@ -55,7 +55,8 @@
 
   "custom/cpu": {
     "format": "{}",
-    "exec": "lua /home/snj/Code/lua_utils/waybar_cpu.lua",
+    // "exec": "lua /home/snj/Code/lua_utils/waybar_cpu.lua",
+    "exec": "lua ~/.config/waybar/scripts/waybar_cpu.lua",
     "interval": 3,
     "return-type": "json",
   },
