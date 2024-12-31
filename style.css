@@ -1,13 +1,14 @@
 /* Основной стиль */
 #waybar {
-  background: #121212;
+  background: alpha(#121212, 0.8);
   color: #C5C8C6;
   font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 10pt;
 }
 
 * { 
-    padding: 0 0.4em;
+  
+    padding: 0.00 0.4em;
     min-height: 0;
     color: #d5c4a1;
 }
@@ -17,18 +18,22 @@
 #workspaces {
   background: transparent;
   margin: 0.0em;
-  padding: 0 0.05em;
+  padding: 0.0 0.05em;
 }
 
 #workspaces button {
   background: transparent;
-  margin: 0.0em;
+  margin: 0.0 0.5em;
   padding: 0 0.05em;
+  border-top: 2px solid #3c3836;
+
+  border-radius: 0px;
 }
 
 #workspaces button.active {
   color: #FFFFFF;
-  background: #d79921;
+  /* background: #d79921; */
+  border-top: 2px solid #d5c4a1;
   border-radius: 0px;
   /* padding: 0; */
   /* margin: 0; */
@@ -50,7 +55,7 @@
 /* Часы */
 #clock {
   color: #d79921;
-    padding-right: 0px;
+  padding-right: 0px;
 }
 
 

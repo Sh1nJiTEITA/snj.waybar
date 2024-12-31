@@ -20,9 +20,9 @@
   ],
 
    "pulseaudio": {
-	"format": "{icon} {volume}%",
+	"format": "<span foreground=\"#fe8019\">{icon}</span> {volume}%",
 	"format-bluetooth": "{volume}% {icon}",
-	"format-muted": "  <i>{volume}%</i>",
+	"format-muted": "<span foreground=\"#fe8019\"><span> <i>{volume}%</i>",
 	"format-icons": {
 	    "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
 	    "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "  ",
@@ -42,15 +42,16 @@
    },
 
    "hyprland/workspaces": {
-	"format": "{name}",
-	"format-icons": {
-		"active": "{name}",
-		"default": ""
-	},
-       "persistent-workspaces": {
-             "*": 5,
-             "HDMI-A-1": 3
-       }
+	"format": "{icon} {windows}",
+	"format-window-separator": "<span letter-spacing=\"15000\"></span>",
+	"window-rewrite-default": "",
+	"window-rewrite": {
+	      "title<.*youtube.*>": "<span foreground=\"#fb4934\"></span>",
+	      "class<firefox>": "<span foreground=\"#fabd2f\"></span><span letter-spacing=\"-4000\"> </span>",
+	      "class<firefox> title<.*github.*>": "<span foreground=\"#fabd2f\"></span><span letter-spacing=\"-4000\"> </span>",
+	      "class<org.wezfurlong.wezterm>": "<span foreground=\"#fabd2f\"></span><span letter-spacing=\"-2000\"> </span>",
+	      "class<org.telegram.desktop>":  "<span foreground=\"#fabd2f\"></span><span letter-spacing=\"-2000\"> </span>"
+    },
   },
 
   "custom/cpu": {
@@ -141,7 +142,7 @@
 
   "clock": {
     "locale" : "ru_RU.UTF-8",
-    "format": "󰃱 {:%a  %d.%m.%Y  %R}",
+    "format": "󰃱 {:%a <span foreground=\"#d5c4a1\"></span> %d.%m.%Y <span foreground=\"#d5c4a1\"></span> %R}",
   },
 
   "workspaces": {
