@@ -1,18 +1,21 @@
 {
   "layer": "top",
+  "width": 1900,
   "position": "bottom",
+  "margin": "0 0 3 0",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": [],
   "modules-right": [
-	"custom/coin_btc", "custom/coin_eth",  "custom/sep",
+	"custom/coin_btc",  "custom/sep",
+	"custom/coin_eth",  "custom/sep",
 	// "custom/powerprofile", 
-	// "battery", "custom/sep",
+	"battery", "custom/sep",
 	"disk", "custom/sep",
 	// "volume", "custom/sep",
 	// "keyboard", "custom/sep",
 	"power-profiles-daemon", "custom/sep",
 	"pulseaudio",	     "custom/sep",
-	"hyprland/language", "custom/sep",
+	// "hyprland/language", "custom/sep",
 	"custom/cpu",	     "custom/sep",
 	"memory",	     "custom/sep",
 	"network",	     "custom/sep",
@@ -100,10 +103,10 @@
   },
 
   "battery": {
-    "format": "BAT {capacity}%",
-    "format-charging": "BAT  {capacity}%",
-    "format-discharging": "BAT  {capacity}%",
-    "format-full": "BAT  {capacity}%",
+    "format": "{capacity}%",
+    "format-charging": " {capacity}%",
+    "format-discharging": " {capacity}%",
+    "format-full": " {capacity}%",
     "low-threshold": 5
   },
 
@@ -120,12 +123,14 @@
     // "tooltip": true
   },
 
+  
   "hyprland/language": {
-    "format": "{}",
-    "format-en": " En",
-    "format-ru": " Ru",
-    "keyboard-name": "aone-varmilo-keyboard"
+      "format": " {}",
+      // "format-en": " En",
+      // "format-ru": " Ru",
+      // "keyboard-name": "at-translated-set-2-keyboard"
   },
+
 
   "memory": {
     "interval": 1,
@@ -134,7 +139,7 @@
 
   "network": {
     "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "{essid} ({signalStrength}%)  ",
     "format-ethernet": "  {ifname}",
     "format-disconnected": "",
     "interval": 5

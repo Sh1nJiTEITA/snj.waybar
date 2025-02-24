@@ -1,9 +1,13 @@
 /* Основной стиль */
 #waybar {
   background: alpha(#121212, 0.8);
+  /* background-color: alpha(#181818, 0.5); */
   color: #C5C8C6;
   font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 10pt;
+  /* border-radius: 8 10 0 0px; */
+  border-radius: 8px;
+  /* border-top: 1px solid alpha(#d5c4a1, 0.5); */
 }
 
 * { 
@@ -44,7 +48,6 @@
 }
 
 #volume, #cpu, #memory {
-  /* padding: 0 10px; */
 }
 
 /* Сеть */
@@ -60,6 +63,14 @@
 
 
 /* Стиль для других модулей */
-.custom {
-  color: #d79921;
+
+#custom-sep {
+  color: #3c3836
+}
+
+#custom-coin_btc, #custom-coin_eth, #custom-cpu {
+  /* border-bottom: 2px solid #3c3836; */
+  /* background-color: alpha(#3c3836, 0.5); */
+  /* border-radius: 4px; */
+  /* margin: 3px; */
 }
