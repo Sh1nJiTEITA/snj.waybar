@@ -45,7 +45,8 @@
    },
 
    "hyprland/workspaces": {
-	"format": "{icon} {windows}",
+	// "format": "{icon} {windows}",
+	"format": "{icon}",
 	"format-window-separator": "<span letter-spacing=\"15000\"></span>",
 	"window-rewrite-default": "",
 	"window-rewrite": {

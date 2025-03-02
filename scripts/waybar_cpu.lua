@@ -13,11 +13,11 @@ local deltas = cpu.calcCpuUsage(last_cpu, gpu_table)
 local out_str = ""
 
 local function format_number(number)
-   if number >= 10 then
-      return string.format("%.1f", number)
-   else
-      return string.format("%.2f", number)
-   end
+	if number >= 10 then
+		return string.format("%.1f", number)
+	else
+		return string.format("%.2f", number)
+	end
 end
 
 out_str = out_str .. "{"
@@ -32,14 +32,14 @@ out_str = out_str .. '"tooltip" : "'
 local sorted = cio.getSortedCpuData(deltas)
 
 for _, key in ipairs(sorted) do
-   if key ~= "cpu" then
-      local formatted_value = format_number(deltas[key])
-      if _ ~= #sorted then
-         out_str = out_str .. " " .. key .. "\t= <b>" .. formatted_value .. "%</b>\\n"
-      else
-         out_str = out_str .. " " .. key .. "\t= <b>" .. formatted_value .. "%</b>"
-      end
-   end
+	if key ~= "cpu" then
+		local formatted_value = format_number(deltas[key])
+		if _ ~= #sorted then
+			out_str = out_str .. " " .. key .. "\t= <b>" .. formatted_value .. "%</b>\\n"
+		else
+			out_str = out_str .. " " .. key .. "\t= <b>" .. formatted_value .. "%</b>"
+		end
+	end
 end
 
 out_str = out_str .. '"'
