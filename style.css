@@ -68,6 +68,10 @@
   color: #3c3836
 }
 
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+}
+
 #custom-coin_btc, #custom-coin_eth, #custom-cpu {
   /* border-bottom: 2px solid #3c3836; */
   /* background-color: alpha(#3c3836, 0.5); */
