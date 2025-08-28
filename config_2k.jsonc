@@ -1,7 +1,8 @@
 {
   "layer": "top",
-  "width": 1900,
+  "width": 2545,
   "position": "bottom",
+  "output" : "DP-2",
   "margin": "0 0 3 0",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": [],
@@ -9,7 +10,7 @@
 	"custom/coin_btc",  "custom/sep",
 	"custom/coin_eth",  "custom/sep",
 	// "custom/powerprofile", 
-	"battery", "custom/sep",
+	// "battery", "custom/sep",
 	"disk", "custom/sep",
 	// "volume", "custom/sep",
 	// "keyboard", "custom/sep",
@@ -19,8 +20,7 @@
 	"custom/cpu",	     "custom/sep",
 	"memory",	     "custom/sep",
 	"network",	     "custom/sep",
-	"clock"
-	
+	"clock",
   ],
 
    "pulseaudio": {
@@ -46,8 +46,7 @@
    },
 
    "hyprland/workspaces": {
-	// "format": "{icon} {windows}",
-	"format": "{icon}",
+	"format": "{icon} {windows}",
 	"format-window-separator": "<span letter-spacing=\"15000\"></span>",
 	"window-rewrite-default": "",
 	"window-rewrite": {
