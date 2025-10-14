@@ -18,5 +18,7 @@
 	"modules-center": [
 		"clock"
 	],
-	"modules-right": []
+	"modules-right": [
+		"wlr/taskbar"
+	]
 }

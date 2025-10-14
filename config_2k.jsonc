@@ -12,7 +12,9 @@
 		"./modules/main.jsonc"
 	],
 	"modules-left": [
-		"mpris"
+		"user",
+		"mpris",
+		"privacy"
 	],
 	"modules-center": [
 		"hyprland/workspaces#mainLeft",
@@ -20,12 +22,13 @@
 		"hyprland/workspaces#mainRight"
 	],
 	"modules-right": [
+		"network",
 		"hyprland/language",
 		"disk",
 		"power-profiles-daemon",
 		"pulseaudio",
 		"custom/cpu",
 		"memory",
-		"network"
+		"temperature"
 	]
 }

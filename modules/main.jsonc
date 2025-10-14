@@ -58,8 +58,10 @@
 	},
 	"mpris": {
 		"interval": 1,
-		"format": "{player_icon} {dynamic}",
-		"format-paused": "{status_icon} <i>{dynamic}</i>",
+		// "format": "{player_icon} {dynamic}",
+		"format": "<span foreground=\"#fe8019\">{player_icon}</span> {position}/{length}",
+		// "format-paused": "{status_icon} <i>{dynamic}</i>",
+		"format-paused": "{status_icon}",
 		"player-icons": {
 			"default": "▶",
 			"mpv": "🎵"
@@ -67,5 +69,71 @@
 		"status-icons": {
 			"paused": "⏸"
 		}
+	},
+	"privacy": {
+		"icon-spacing": 4,
+		"icon-size": 18,
+		"transition-duration": 250,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-out",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 24
+			}
+		],
+		"ignore-monitor": true,
+		"ignore": [
+			{
+				"type": "audio-in",
+				"name": "cava"
+			},
+			{
+				"type": "screenshare",
+				"name": "obs"
+			}
+		]
+	},
+	"wlr/taskbar": {
+		"all-outputs": true,
+		"format": "{icon}",
+		"icon-size": 18,
+		// "icon-theme": "Numix-Circle",
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close",
+		"ignore-list": [
+			"NekoBox"
+		],
+		"app_ids-mapping": {
+			"firefoxdeveloperedition": "firefox-developer-edition"
+		},
+		"rewrite": {
+			"Firefox Web Browser": "Firefox",
+			"Foot Server": "Terminal"
+		}
+	},
+	"temperature": {
+		"thermal-zone": 3,
+		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		// "critical-threshold": 80,
+		// "format-critical": "{temperatureC}°C ",
+		"format": "<span foreground=\"#fe8019\"></span> {temperatureC}°C"
+	},
+	"user": {
+		"format": "<span foreground=\"#fe8019\">{user}</span> {work_H}h",
+		"interval": 60,
+		"height": 20,
+		"width": 20,
+		"icon": true,
 	}
 }
