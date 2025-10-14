@@ -1,0 +1,71 @@
+{
+	"load": {
+		"interval": 1,
+		"format": "<span foreground=\"#fe8019\"> </span>{}"
+	},
+	"custom/cpu": {
+		"format": "{}",
+		"exec": "lua ~/.config/waybar/scripts/waybar_cpu.lua",
+		"interval": 1,
+		"return-type": "json"
+	},
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": "<span foreground=\"#fb4934\"></span>",
+			"performance": "<span foreground=\"#fb4934\"></span>",
+			"balanced": "<span foreground=\"#fabd2f\">󰗑</span>",
+			"power-saver": "<span foreground=\"#b8bb27\"></span>"
+		}
+	},
+	"battery": {
+		"format": "{capacity}%",
+		"format-charging": " {capacity}%",
+		"format-discharging": " {capacity}%",
+		"format-full": " {capacity}%",
+		"low-threshold": 5
+	},
+	"disk": {
+		"interval": 30,
+		"format": "{path} {percentage_free}%",
+		"interval": 25,
+		"path": "/"
+	},
+	"volume": {
+		"format": " {volume}%",
+	},
+	"memory": {
+		"interval": 1,
+		"format": "<span foreground=\"#fe8019\"> </span>{used:0.1f}G",
+	},
+	"network": {
+		"format": "{ifname}",
+		"format-wifi": "{essid} ({signalStrength}%)<span foreground=\"#fe8019\"> </span>",
+		"format-ethernet": "<span foreground=\"#fe8019\"> </span>{ifname}",
+		"format-disconnected": "",
+		"interval": 5
+	},
+	"clock": {
+		"locale": "ru_RU.UTF-8",
+		"format": "<span foreground=\"#fe8019\">󰃱 </span>{:%a %d.%m.%Y | %R}",
+	},
+	"workspaces": {
+		"disable-scroll": true,
+		"strip-trailing-dashes": true,
+		"active-background": "#4D4846",
+		"active-underline": "#d79921",
+		"urgent-background": "#cc241d"
+	},
+	"mpris": {
+		"interval": 1,
+		"format": "{player_icon} {dynamic}",
+		"format-paused": "{status_icon} <i>{dynamic}</i>",
+		"player-icons": {
+			"default": "▶",
+			"mpv": "🎵"
+		},
+		"status-icons": {
+			"paused": "⏸"
+		}
+	}
+}

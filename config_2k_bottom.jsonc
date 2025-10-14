@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"width": 2560,
-	"position": "top",
+	"position": "bottom",
 	"output": "DP-2",
 	"include": [
 		"./modules/separators.jsonc",
@@ -12,20 +12,11 @@
 		"./modules/main.jsonc"
 	],
 	"modules-left": [
-		"mpris"
+		"custom/coin_btc",
+		"custom/coin_eth"
 	],
 	"modules-center": [
-		"hyprland/workspaces#mainLeft",
-		"cava",
-		"hyprland/workspaces#mainRight"
+		"clock"
 	],
-	"modules-right": [
-		"hyprland/language",
-		"disk",
-		"power-profiles-daemon",
-		"pulseaudio",
-		"custom/cpu",
-		"memory",
-		"network"
-	]
+	"modules-right": []
 }

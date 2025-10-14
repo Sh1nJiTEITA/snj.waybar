@@ -1,0 +1,17 @@
+{
+	"custom/sep": {
+		"format": "|",
+		"tooltip": false
+	},
+	"custom/sep_flex": {
+		"format": " ",
+		"tooltip": false,
+		"interval": "once"
+	},
+	// Some comment here
+	"custom/sep2": {
+		"format": " ",
+		"tooltip": false,
+		"interval": "once"
+	}
+}

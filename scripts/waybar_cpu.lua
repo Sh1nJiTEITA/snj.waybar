@@ -47,4 +47,4 @@ out_str = out_str .. "}"
 
 print(out_str)
 
-cio.saveTable("./last_cpu_data.lua", gpu_table, "CPU_DATA")
+cio.saveTable("/tmp/last_cpu_data.lua", gpu_table, "CPU_DATA")

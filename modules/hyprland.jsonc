@@ -1,0 +1,33 @@
+{
+	"hyprland/workspaces#mainLeft": {
+		"persistent-only": true,
+		"persistent-workspaces": {
+			"DP-2": [
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		"format": "{icon}"
+	},
+	"hyprland/workspaces#mainRight": {
+		"persistent-only": true,
+		"persistent-workspaces": {
+			"DP-2": [
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		},
+		"format": "{icon}"
+	},
+	"hyprland/language": {
+		"format": "<span foreground=\"#fe8019\"></span> {}",
+		"format-en": "En",
+		"format-ru": "Ru"
+	}
+}
