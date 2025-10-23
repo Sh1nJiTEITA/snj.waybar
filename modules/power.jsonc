@@ -1,0 +1,30 @@
+{
+	"group/power": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 500,
+			// "children-class": "gpower",
+			"transition-left-to-right": false,
+		},
+		"modules": [
+			"custom/power",
+			"custom/quit",
+			"custom/reboot",
+		]
+	},
+	"custom/quit": {
+		"format": "󰗼",
+		"tooltip": false,
+		"on-click": "hyprctl dispatch exit"
+	},
+	"custom/reboot": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "reboot"
+	},
+	"custom/power": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "shutdown now"
+	}
+}

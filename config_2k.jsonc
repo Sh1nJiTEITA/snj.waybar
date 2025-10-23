@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-	"width": 2560,
+	"width": 2540,
 	"position": "top",
 	"output": "DP-2",
 	"include": [
@@ -9,10 +9,46 @@
 		"./modules/sound.jsonc",
 		"./modules/coins.jsonc",
 		"./modules/hyprland.jsonc",
-		"./modules/main.jsonc"
+		"./modules/main.jsonc",
+		"./modules/power.jsonc"
 	],
+	"group/monitor": {
+		"orientation": "horizontal",
+		"modules": [
+			"load",
+			"memory",
+			"temperature"
+		]
+	},
+	"group/interaction": {
+		"orientation": "horizontal",
+		"drawer": {
+			"transition-duration": 500,
+			// "children-class": "not-power",
+			"transition-left-to-right": true,
+		},
+		"modules": [
+			"hyprland/language",
+			"power-profiles-daemon",
+			"disk",
+			"pulseaudio"
+		]
+	},
+	"group/coins": {
+		"orientation": "horizontal",
+		"drawer": {
+			"transition-duration": 500,
+			// "children-class": "not-power",
+			"transition-left-to-right": true,
+		},
+		"modules": [
+			"custom/coin_eth",
+			"custom/coin_btc",
+		]
+	},
 	"modules-left": [
 		"user",
+		"clock",
 		"mpris",
 		"privacy"
 	],
@@ -22,13 +58,9 @@
 		"hyprland/workspaces#mainRight"
 	],
 	"modules-right": [
+		"group/coins",
 		"network",
-		"hyprland/language",
-		"disk",
-		"power-profiles-daemon",
-		"pulseaudio",
-		"custom/cpu",
-		"memory",
-		"temperature"
+		"group/interaction",
+		"group/mgroup/power"
 	]
 }

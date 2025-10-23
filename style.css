@@ -1,34 +1,43 @@
 #waybar {
   background: transparent;
-  color: #C5C8C6;
+  /* color: #C5C8C6; */
   font-family: "JetBrainsMono Nerd Font", monospace;
+  background: alpha(#101010, 0.439);
+  transition: all 0.25s ease-in-out;
+  box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom: 2px solid rgba(50, 50, 50, 0.1);
+  font-weight: 500;
 }
 
 * {
   padding: 0.00 0.4em;
   min-height: 0;
-  color: #d5c4a1;
+  /* color: #d5c4a1; */
+  font-size: 16;
 }
 
 
 
 tooltip label {
   padding: 40px;
-  color: white;
+  /* color: white; */
   font-size: 18;
 }
 
 
 #workspaces button {
-  background: rgba(20, 20, 20, 0.35);
-  border-bottom: 2px solid rgba(50, 50, 50, 0.1);
-  border-radius: 8px;
-  margin: 0 0.25em;
-  /* padding: 0 0.9em; */
   color: #f2f2f2;
+  /* background: rgba(50, 50, 50, 0.237); */
+  /* border-bottom: 2px solid rgba(50, 50, 50, 0.1); */
+  /* border-radius: 8px; */
+  margin: 0.0 0.2em;
+  padding: 0 0.1em;
   font-weight: 500;
+
   transition: all 0.25s ease-in-out;
-  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05);
+  /* box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05); */
 }
 
 
@@ -39,11 +48,17 @@ tooltip label {
 }
 
 #workspaces button.active {
-  background: rgba(60, 60, 60, 0.35);
+  color: alpha(#f2f2f2, 0.05);
+  /* background: rgba(60, 60, 60, 0.35); */
+  /* background: alpha(#ebdbb2, 0.05); */
+  border-radius: 5px;
+  /* box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05); */
 }
 
 #workspaces {
-  padding: 0.2em;
+  /* padding: 0.2em; */
+  padding: 0px;
+  margin: 0px;
 }
 
 .modules-center {
@@ -55,20 +70,24 @@ tooltip label {
 tooltip,
 #user,
 #mpris,
-#privacy,
-.modules-right,
+/* #privacy, */
+#clock,
+#monitor,
+/* #power, */
+/* .modules-right, */
 .modules-center {
-  background: rgba(20, 20, 20, 0.65);
+  background: alpha(#202020, 0.239);
   transition: all 0.25s ease-in-out;
   box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
-
-  border-bottom: 2px solid rgba(50, 50, 50, 0.1);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  color: #f2f2f2;
+  border: 2px solid alpha(#ebdbb2, 0.03);
+  border-radius: 8px;
   font-weight: 500;
-  font-size: 14;
+  /* padding: 0 1.0em; */
+  margin: 5 0 5 0px;
+  padding: 0 10px;
 }
+
+
 
 tooltip {
   background: rgba(20, 20, 20, 0.9);
@@ -76,23 +95,25 @@ tooltip {
 }
 
 #cava {
-  color: #fe8019;
   margin: 0 0.5em;
+  color: #d5c4a1;
 }
 
+.modules-left,
+/* .modules-center, */
 .modules-right {
-  margin: 0 3px;
+  /* font-size: 14; */
+  padding: 0 0px;
+  /* margin: 5px; */
 }
 
-.modules-left {
-  margin: 0px;
-  padding: 0px;
-}
+
 
 
 
 
 #custom-cpu,
+#load,
 #custom-coin_btc,
 #custom-coin_eth,
 #disk,
@@ -103,62 +124,119 @@ tooltip {
 #language,
 #memory,
 #battery,
-#clock,
-/* #privacy, */
+/* #clock, */
 #temperature,
-#wlr-taskbar,
-#network {
-  padding: 0 1.0em;
-  font-size: 16px;
+#wlr-taskbar
+
+/* #custom-quit, */
+/* #custom-reboot, */
+/* #custom-power, */
+  {
+  color: #d5c4a1;
+  margin: 0px;
+  margin: 0 0.4em;
 }
 
-#custom-cpu:hover,
-#custom-coin_btc:hover,
-#custom-coin_eth:hover,
-#disk:hover,
-#power-profiles-daemon:hover,
-#pulseaudio:hover,
-#volume:hover,
-#cpu:hover,
-#mpris:hover,
-#user:hover,
-#language:hover,
-#privacy:hover,
-#memory:hover,
-#user:hover,
-#battery:hover,
-#temperature:hover,
-#clock:hover,
-/* #privacy:hover, */
-#wlr-taskbar:hover,
-#network:hover {
-  padding: 0 1.0em;
-  font-size: 16px;
-
-  background: rgba(60, 60, 60, 0.35);
-  border-bottom: 2px solid rgba(50, 50, 50, 0.1);
+#coins,
+#interaction {
+  /* padding-right: 10px; */
+  /* margin-left: 0px; */
+  background: alpha(#202020, 0.239);
+  transition: all 0.25s ease-in-out;
+  box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
+  border: 2px solid alpha(#ebdbb2, 0.03);
   border-radius: 8px;
-
-  /* margin: 0 0.25em; */
-  color: #f2f2f2;
   font-weight: 500;
-  transition: all 0.5s ease-in-out;
-  /* box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05); */
+  /* margin: 5 0 5 10px; */
+  /* margin-top: 5px; */
+  /* margin-bottom: 5px; */
+  margin: 5px;
 }
+
+#network {
+  /* padding-left: 0px; */
+  background: alpha(#202020, 0.239);
+  transition: all 0.25s ease-in-out;
+  box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
+  border: 2px solid alpha(#ebdbb2, 0.03);
+  border-radius: 8px;
+  font-weight: 500;
+  margin: 5 0 5 0px;
+  padding: 0 10px;
+}
+
+#power {
+  padding-left: 0px;
+  background: alpha(#202020, 0.239);
+  transition: all 0.25s ease-in-out;
+  box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
+  border: 2px solid alpha(#ebdbb2, 0.03);
+  border-radius: 8px;
+  font-weight: 500;
+  margin: 5 0 5 5px;
+}
+
+#custom-power {
+  /* padding-right: 4px; */
+  padding: 0 12px;
+  margin: 0px;
+  color: #d5c4a1;
+}
+
+#custom-power:hover {
+  color: #fb4934;
+}
+
+#custom-quit {
+  color: #d5c4a1;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+
+#custom-quit:hover {
+  color: #83a598;
+}
+
+#custom-reboot {
+  color: #d5c4a1;
+  padding: 0px;
+  padding-right: 2px;
+}
+
+#custom-reboot:hover {
+  color: #fabd2f;
+}
+
+
+#pulseaudio {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+#language {
+  margin: 0px;
+  padding: 2px;
+  /* padding-left: 2px; */
+}
+
+
+#load {
+  padding-left: 2px;
+  margin-left: 0px;
+}
+
+#temperature {
+  padding-right: 2px;
+  margin-right: 0px;
+}
+
 
 #privacy,
 #mpris,
+#clock,
 #user {
-  font-size: 14;
-  margin: 0 10 0 3px;
-  padding: 0 1.0em;
-}
-
-#privacy:hover,
-#mpris:hover,
-#user:hover {
-  font-size: 14;
-  margin: 0 10 0 3px;
-  padding: 0 1.0em;
-  transition: all 0.5s ease-in-out;
+  color: #d5c4a1;
+  /* font-size: 14; */
+  /* padding: 0 1.0em; */
+  margin-right: 5px;
 }

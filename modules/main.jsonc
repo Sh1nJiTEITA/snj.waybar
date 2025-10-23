@@ -1,21 +1,22 @@
 {
 	"load": {
 		"interval": 1,
-		"format": "<span foreground=\"#fe8019\"> </span>{}"
+		"format": "<span foreground=\"#D4C4A5\"> </span>{}%"
 	},
-	"custom/cpu": {
-		"format": "{}",
-		"exec": "lua ~/.config/waybar/scripts/waybar_cpu.lua",
-		"interval": 1,
-		"return-type": "json"
-	},
+	// "custom/cpu": {
+	// 	"format": "{}",
+	// 	"exec": "lua ~/.config/waybar/scripts/waybar_cpu.lua",
+	// 	"interval": 1,
+	// 	"return-type": "json"
+	// },
 	"power-profiles-daemon": {
 		"format": "{icon}",
 		"format-icons": {
-			"default": "<span foreground=\"#fb4934\"></span>",
-			"performance": "<span foreground=\"#fb4934\"></span>",
-			"balanced": "<span foreground=\"#fabd2f\">󰗑</span>",
-			"power-saver": "<span foreground=\"#b8bb27\"></span>"
+			// #d4c4a5
+			"default": "<span foreground=\"#d4c4a5\"></span>",
+			"performance": "<span foreground=\"#d4c4a5\"></span>",
+			"balanced": "<span foreground=\"#d4c4a5\">󰗑</span>",
+			"power-saver": "<span foreground=\"#d4c4a5\"></span>"
 		}
 	},
 	"battery": {
@@ -27,7 +28,7 @@
 	},
 	"disk": {
 		"interval": 30,
-		"format": "{path} {percentage_free}%",
+		"format": " {percentage_free}%",
 		"interval": 25,
 		"path": "/"
 	},
@@ -36,18 +37,20 @@
 	},
 	"memory": {
 		"interval": 1,
-		"format": "<span foreground=\"#fe8019\"> </span>{used:0.1f}G",
+		"format": "<span foreground=\"#D4C4A5\"> </span>{used:0.1f}G",
 	},
 	"network": {
 		"format": "{ifname}",
-		"format-wifi": "{essid} ({signalStrength}%)<span foreground=\"#fe8019\"> </span>",
-		"format-ethernet": "<span foreground=\"#fe8019\"> </span>{ifname}",
+		"format-wifi": "{essid} ({signalStrength}%)<span foreground=\"#D4C4A5\"> </span>",
+		// "format-ethernet": "<span foreground=\"#D4C4A5\"> </span>{ifname}",
+		"format-ethernet": "<span foreground=\"#D4C4A5\"> </span>",
 		"format-disconnected": "",
 		"interval": 5
 	},
 	"clock": {
 		"locale": "ru_RU.UTF-8",
-		"format": "<span foreground=\"#fe8019\">󰃱 </span>{:%a %d.%m.%Y | %R}",
+		// "format": "<span foreground=\"#D4C4A5\">󰃱 </span>{:%a %d.%m.%Y | %R}",
+		"tooltip-format": "<span foreground=\"#D4C4A5\">󰃱  </span>{:%a %d.%m.%Y | %R}",
 	},
 	"workspaces": {
 		"disable-scroll": true,
@@ -59,7 +62,7 @@
 	"mpris": {
 		"interval": 1,
 		// "format": "{player_icon} {dynamic}",
-		"format": "<span foreground=\"#fe8019\">{player_icon}</span> {position}/{length}",
+		"format": "<span foreground=\"#D4C4A5\">{player_icon}</span> {position}/{length}",
 		// "format-paused": "{status_icon} <i>{dynamic}</i>",
 		"format-paused": "{status_icon}",
 		"player-icons": {
@@ -127,10 +130,10 @@
 		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
 		// "critical-threshold": 80,
 		// "format-critical": "{temperatureC}°C ",
-		"format": "<span foreground=\"#fe8019\"></span> {temperatureC}°C"
+		"format": "<span foreground=\"#D4C4A5\"></span> {temperatureC}°C"
 	},
 	"user": {
-		"format": "<span foreground=\"#fe8019\">{user}</span> {work_H}h",
+		"format": "<span foreground=\"#D4C4A5\">{user}</span> {work_H}h",
 		"interval": 60,
 		"height": 20,
 		"width": 20,

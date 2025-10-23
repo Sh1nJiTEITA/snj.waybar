@@ -1,26 +1,21 @@
 {
 	"layer": "top",
-	"width": 2560,
-	"position": "bottom",
+	"height": 1440,
+	"width": 5,
+	"position": "left",
 	"output": "DP-2",
+	"reload_style_on_change": true,
 	"include": [
 		"./modules/separators.jsonc",
 		"./modules/cava.jsonc",
 		"./modules/sound.jsonc",
 		"./modules/coins.jsonc",
 		"./modules/hyprland.jsonc",
-		"./modules/swaync.jsonc",
 		"./modules/main.jsonc"
 	],
-	"modules-left": [
-		"custom/coin_btc",
-		"custom/coin_eth"
-	],
+	"modules-left": [],
 	"modules-center": [
-		"clock",
-		"custom/notification"
-	],
-	"modules-right": [
 		"wlr/taskbar"
-	]
+	],
+	"modules-right": []
 }

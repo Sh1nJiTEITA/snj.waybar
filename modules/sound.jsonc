@@ -1,8 +1,8 @@
 {
 	"pulseaudio": {
-		"format": "<span foreground=\"#fe8019\">{icon}</span> {volume}%",
+		"format": "<span foreground=\"#D4C4A5\">{icon}</span> {volume}%",
 		"format-bluetooth": "{volume}% {icon}",
-		"format-muted": "<span foreground=\"#fe8019\"><span> <i>{volume}%</i>",
+		"format-muted": "<span foreground=\"#D4C4A5\"><span> <i>{volume}%</i>",
 		"format-icons": {
 			"alsa_output.pci-0000_00_1f.3.analog-stereo": "",
 			"alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "  ",

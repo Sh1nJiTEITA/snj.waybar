@@ -26,7 +26,7 @@
 		"format": "{icon}"
 	},
 	"hyprland/language": {
-		"format": "<span foreground=\"#fe8019\"></span> {}",
+		"format": "<span foreground=\"#d4c4a5\"></span> {}",
 		"format-en": "En",
 		"format-ru": "Ru"
 	}
