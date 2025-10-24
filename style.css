@@ -8,10 +8,11 @@
   border-bottom-right-radius: 8px;
   border-bottom: 1px solid rgba(50, 50, 50, 0.1);
   font-weight: 500;
+  color: #d5c4a1;
 }
 
 * {
-  color: #d5c4a1;
+
   padding: 0.00 0.4em;
   min-height: 0;
   font-size: 16px;
@@ -26,7 +27,7 @@ tooltip label {
 
 
 #workspaces button {
-  color: #f2f2f2;
+  color: #d5c4a1;
   margin: 0.0 0.2em;
   padding: 0 0.1em;
   font-weight: 500;
@@ -51,7 +52,6 @@ tooltip label {
 }
 
 
-
 tooltip,
 #user,
 #mpris,
@@ -72,6 +72,11 @@ tooltip,
   font-weight: 500;
   margin: 0 0 5 5px;
   padding: 1 10 0 10px;
+}
+
+#user {
+  margin-left: 0px;
+  padding: 0 2px;
 }
 
 tooltip {
@@ -134,4 +139,8 @@ tooltip {
   padding-right: 0px;
   padding-left: 20px;
   margin-right: 0px;
+}
+
+#disk {
+  margin-left: 25px;
 }

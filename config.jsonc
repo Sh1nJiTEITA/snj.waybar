@@ -10,42 +10,9 @@
 		"./modules/coins.jsonc",
 		"./modules/hyprland.jsonc",
 		"./modules/main.jsonc",
-		"./modules/power.jsonc"
+		"./modules/power.jsonc",
+		"./modules/groups.jsonc"
 	],
-	"group/monitor": {
-		"orientation": "horizontal",
-		"modules": [
-			"load",
-			"memory",
-			"temperature"
-		]
-	},
-	"group/interaction": {
-		"orientation": "horizontal",
-		"drawer": {
-			"transition-duration": 500,
-			// "children-class": "not-power",
-			"transition-left-to-right": true,
-		},
-		"modules": [
-			"hyprland/language",
-			"power-profiles-daemon",
-			"disk",
-			"pulseaudio"
-		]
-	},
-	"group/coins": {
-		"orientation": "horizontal",
-		"drawer": {
-			"transition-duration": 500,
-			// "children-class": "not-power",
-			"transition-left-to-right": true,
-		},
-		"modules": [
-			"custom/coin_eth",
-			"custom/coin_btc",
-		]
-	},
 	"modules-left": [
 		"user",
 		"clock",
