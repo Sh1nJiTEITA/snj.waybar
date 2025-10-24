@@ -2,7 +2,8 @@
 Dark transparent top waybar configuration.
 
 For dark background: 
-<img width="2559" height="32" alt="image" src="https://github.com/user-attachments/assets/80ffabf7-4050-464a-8fe3-d183255672cb" />
+<img width="2559" height="35" alt="image" src="https://github.com/user-attachments/assets/00a95cae-7670-454c-a4e3-f30f20eaff4f" />
+
 
 For light backgroung:
 <img width="2558" height="34" alt="image" src="https://github.com/user-attachments/assets/bcf44c60-2247-4bf0-b798-b8c7b6c23364" />
