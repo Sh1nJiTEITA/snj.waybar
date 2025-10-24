@@ -14,14 +14,14 @@
   color: #d5c4a1;
   padding: 0.00 0.4em;
   min-height: 0;
-  font-size: 16;
+  font-size: 16px;
 }
 
 
 
 tooltip label {
   padding: 40px;
-  font-size: 18;
+  font-size: 18px;
 }
 
 
@@ -71,7 +71,6 @@ tooltip,
   border-bottom-left-radius: 6px;
   font-weight: 500;
   margin: 0 0 5 5px;
-  /* padding: 0 10px; */
   padding: 1 10 0 10px;
 }
 
