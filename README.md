@@ -1,12 +1,11 @@
 # Description
-Dark transparent top waybar configuration.
+Dark monochrome transparent top `waybar` configuration for `hyprland`.
 
 For dark background: 
-<img width="2559" height="35" alt="image" src="https://github.com/user-attachments/assets/00a95cae-7670-454c-a4e3-f30f20eaff4f" />
-
+<img width="2561" height="36" alt="image" src="https://github.com/user-attachments/assets/6ed8aef1-0704-476a-ade6-45e4eec1576a" />
 
 For light backgroung:
-<img width="2558" height="34" alt="image" src="https://github.com/user-attachments/assets/bcf44c60-2247-4bf0-b798-b8c7b6c23364" />
+<img width="2562" height="35" alt="image" src="https://github.com/user-attachments/assets/d052b1ab-b279-41aa-9c5c-2ac4c4671fcf" />
 
 # Installation
 Configuration files must be cloned to `~/.config/waybar`:
@@ -20,5 +19,5 @@ git clone https://github.com/Sh1nJiTEITA/snj.waybar.git ~/.config/waybar
 ```bash
 yay -S waybar-cava
 ```
-It will work until you need some other module with same behaviour like `mpris` module.
+It will work until you dont need some other module with same behaviour like `mpris` module.
 
