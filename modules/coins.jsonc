@@ -1,12 +1,12 @@
 {
 	"custom/coin_btc": {
-		"exec": "~/Scripts/cr/sc_hypr.sh https://api-testnet.bybit.com/v5/market/tickers spot BTCUSDT",
+		"exec": "~/.config/waybar/custom/crypt.sh https://api-testnet.bybit.com/v5/market/tickers spot BTCUSDT",
 		"interval": 1,
 		"format": "{}",
 		"return-type": "json"
 	},
 	"custom/coin_eth": {
-		"exec": "~/Scripts/cr/sc_hypr.sh https://api-testnet.bybit.com/v5/market/tickers spot ETHUSDT",
+		"exec": "~/.config/waybar/custom/crypt.sh https://api-testnet.bybit.com/v5/market/tickers spot ETHUSDT",
 		"interval": 1,
 		"format": "{}",
 		"return-type": "json"

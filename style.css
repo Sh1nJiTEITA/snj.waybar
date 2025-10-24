@@ -1,20 +1,19 @@
 #waybar {
   background: transparent;
-  /* color: #C5C8C6; */
   font-family: "JetBrainsMono Nerd Font", monospace;
   background: alpha(#101010, 0.439);
   transition: all 0.25s ease-in-out;
   box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  border-bottom: 2px solid rgba(50, 50, 50, 0.1);
+  border-bottom: 1px solid rgba(50, 50, 50, 0.1);
   font-weight: 500;
 }
 
 * {
+  color: #d5c4a1;
   padding: 0.00 0.4em;
   min-height: 0;
-  /* color: #d5c4a1; */
   font-size: 16;
 }
 
@@ -22,22 +21,16 @@
 
 tooltip label {
   padding: 40px;
-  /* color: white; */
   font-size: 18;
 }
 
 
 #workspaces button {
   color: #f2f2f2;
-  /* background: rgba(50, 50, 50, 0.237); */
-  /* border-bottom: 2px solid rgba(50, 50, 50, 0.1); */
-  /* border-radius: 8px; */
   margin: 0.0 0.2em;
   padding: 0 0.1em;
   font-weight: 500;
-
   transition: all 0.25s ease-in-out;
-  /* box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05); */
 }
 
 
@@ -49,45 +42,38 @@ tooltip label {
 
 #workspaces button.active {
   color: alpha(#f2f2f2, 0.05);
-  /* background: rgba(60, 60, 60, 0.35); */
-  /* background: alpha(#ebdbb2, 0.05); */
   border-radius: 5px;
-  /* box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05); */
 }
 
 #workspaces {
-  /* padding: 0.2em; */
   padding: 0px;
   margin: 0px;
 }
 
-.modules-center {
-  padding: 0px;
-  margin: 0px;
-}
 
-/* .modules-left, */
+
 tooltip,
 #user,
 #mpris,
-/* #privacy, */
 #clock,
+#privacy,
 #monitor,
-/* #power, */
-/* .modules-right, */
+#coins,
+#interaction,
+#network,
+#power,
 .modules-center {
   background: alpha(#202020, 0.239);
   transition: all 0.25s ease-in-out;
   box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
-  border: 2px solid alpha(#ebdbb2, 0.03);
-  border-radius: 8px;
+  border-bottom: 0.1em solid alpha(#ebdbb2, 0.03);
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
   font-weight: 500;
-  /* padding: 0 1.0em; */
-  margin: 5 0 5 0px;
-  padding: 0 10px;
+  margin: 0 0 5 5px;
+  /* padding: 0 10px; */
+  padding: 1 10 0 10px;
 }
-
-
 
 tooltip {
   background: rgba(20, 20, 20, 0.9);
@@ -100,85 +86,14 @@ tooltip {
 }
 
 .modules-left,
-/* .modules-center, */
+.modules-center,
 .modules-right {
-  /* font-size: 14; */
   padding: 0 0px;
-  /* margin: 5px; */
 }
 
-
-
-
-
-
-#custom-cpu,
-#load,
-#custom-coin_btc,
-#custom-coin_eth,
-#disk,
-#power-profiles-daemon,
-#pulseaudio,
-#volume,
-#cpu,
 #language,
-#memory,
-#battery,
-/* #clock, */
-#temperature,
-#wlr-taskbar
-
-/* #custom-quit, */
-/* #custom-reboot, */
-/* #custom-power, */
-  {
-  color: #d5c4a1;
-  margin: 0px;
-  margin: 0 0.4em;
-}
-
-#coins,
-#interaction {
-  /* padding-right: 10px; */
-  /* margin-left: 0px; */
-  background: alpha(#202020, 0.239);
-  transition: all 0.25s ease-in-out;
-  box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
-  border: 2px solid alpha(#ebdbb2, 0.03);
-  border-radius: 8px;
-  font-weight: 500;
-  /* margin: 5 0 5 10px; */
-  /* margin-top: 5px; */
-  /* margin-bottom: 5px; */
-  margin: 5px;
-}
-
-#network {
-  /* padding-left: 0px; */
-  background: alpha(#202020, 0.239);
-  transition: all 0.25s ease-in-out;
-  box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
-  border: 2px solid alpha(#ebdbb2, 0.03);
-  border-radius: 8px;
-  font-weight: 500;
-  margin: 5 0 5 0px;
-  padding: 0 10px;
-}
-
-#power {
-  padding-left: 0px;
-  background: alpha(#202020, 0.239);
-  transition: all 0.25s ease-in-out;
-  box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
-  border: 2px solid alpha(#ebdbb2, 0.03);
-  border-radius: 8px;
-  font-weight: 500;
-  margin: 5 0 5 5px;
-}
-
 #custom-power {
-  /* padding-right: 4px; */
-  padding: 0 12px;
+  padding-right: 10px;
   margin: 0px;
   color: #d5c4a1;
 }
@@ -208,35 +123,16 @@ tooltip {
 }
 
 
-#pulseaudio {
-  padding-right: 0px;
-  margin-right: 0px;
-}
-
-#language {
-  margin: 0px;
-  padding: 2px;
-  /* padding-left: 2px; */
-}
-
-
 #load {
-  padding-left: 2px;
+  padding-left: 0px;
+  padding-right: 20px;
   margin-left: 0px;
 }
 
+
+#pulseaudio,
 #temperature {
-  padding-right: 2px;
+  padding-right: 0px;
+  padding-left: 20px;
   margin-right: 0px;
-}
-
-
-#privacy,
-#mpris,
-#clock,
-#user {
-  color: #d5c4a1;
-  /* font-size: 14; */
-  /* padding: 0 1.0em; */
-  margin-right: 5px;
 }
