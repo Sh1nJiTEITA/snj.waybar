@@ -55,7 +55,7 @@ tooltip label {
 tooltip,
 #user,
 #mpris,
-#clock,
+/* #clock, */
 #privacy,
 #monitor,
 #coins,
@@ -72,6 +72,11 @@ tooltip,
   font-weight: 500;
   margin: 0 0 5 5px;
   padding: 1 10 0 10px;
+}
+
+
+#clock {
+  padding: 0 50px;
 }
 
 #user {

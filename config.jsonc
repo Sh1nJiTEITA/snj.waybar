@@ -5,7 +5,7 @@
 	"output": "DP-2",
 	"include": [
 		"./modules/separators.jsonc",
-		"./modules/cava.jsonc",
+		// "./modules/cava.jsonc",
 		"./modules/sound.jsonc",
 		"./modules/coins.jsonc",
 		"./modules/hyprland.jsonc",
@@ -15,17 +15,17 @@
 	],
 	"modules-left": [
 		"user",
-		"clock",
+		"group/coins",
 		"mpris",
 		"privacy"
 	],
 	"modules-center": [
 		"hyprland/workspaces#mainLeft",
-		"cava",
+		// "cava",
+		"clock",
 		"hyprland/workspaces#mainRight"
 	],
 	"modules-right": [
-		"group/coins",
 		"network",
 		"group/interaction",
 		"group/monitor",
