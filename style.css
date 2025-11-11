@@ -4,9 +4,11 @@
   background: alpha(#101010, 0.439);
   transition: all 0.25s ease-in-out;
   box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  /* border-bottom-left-radius: 8px; */
+  /* border-bottom-right-radius: 8px; */
   border-bottom: 1px solid rgba(50, 50, 50, 0.1);
+  border-right: 1px solid rgba(50, 50, 50, 0.1);
+  border-left: 1px solid rgba(50, 50, 50, 0.1);
   font-weight: 500;
   color: #d5c4a1;
 }
@@ -81,7 +83,7 @@ tooltip,
 
 #user {
   margin-left: 0px;
-  padding: 0 2px;
+  /* padding: 0 2px; */
 }
 
 tooltip {

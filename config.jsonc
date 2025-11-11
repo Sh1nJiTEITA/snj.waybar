@@ -3,6 +3,7 @@
 	"width": 2540,
 	"position": "top",
 	"output": "DP-2",
+	// "margin-top": 9,
 	"include": [
 		"./modules/separators.jsonc",
 		// "./modules/cava.jsonc",
