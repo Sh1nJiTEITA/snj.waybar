@@ -65,7 +65,7 @@ tooltip,
 #network,
 #power,
 .modules-center {
-  background: alpha(#202020, 0.239);
+  /* background: alpha(#202020, 0.239); */
   transition: all 0.25s ease-in-out;
   box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.05);
   border-bottom: 0.1em solid alpha(#ebdbb2, 0.03);

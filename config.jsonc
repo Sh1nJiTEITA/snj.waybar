@@ -16,8 +16,8 @@
 	],
 	"modules-left": [
 		"user",
-		"group/coins",
 		"mpris",
+		"group/coins",
 		"privacy"
 	],
 	"modules-center": [

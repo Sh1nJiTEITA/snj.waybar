@@ -60,13 +60,15 @@
 		"urgent-background": "#cc241d"
 	},
 	"mpris": {
-		"interval": 1,
+		"interval": 0.5,
 		// "format": "{player_icon} {dynamic}",
 		"format": "<span foreground=\"#D4C4A5\">{player_icon}</span> {position}/{length}",
+		"format-paused": "<span foreground=\"#D4C4A5\">⏸</span> {position}/{length}",
 		// "format-paused": "{status_icon} <i>{dynamic}</i>",
-		"format-paused": "{status_icon}",
+		// "format-paused": "{status_icon}",
 		"player-icons": {
 			"default": "▶",
+			"paused": "⏸",
 			"mpv": "🎵"
 		},
 		"status-icons": {
